@@ -1,11 +1,7 @@
 module.exports = {
-  // Placeholder used to rename and replace in files
-  // package.json, index.json, android/, ios/
-  placeholderName: "ProjectName",
+  placeholderName: "RNBaseProject",
 
-  // Directory with template
-  templateDir: "./template",
+  titlePlaceholder: "RNBaseProject",
 
-  // Path to script, which will be executed after init
-  postInitScript: "./script.js"
+  templateDir: "./template"
 };
