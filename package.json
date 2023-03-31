@@ -1,0 +1,8 @@
+{
+  "name": "RNBaseProject",
+  "version": "0.0.1",
+  "description": "React Native Template Base",
+  "repository": "https://github.com/thangquan/react-native-paisen.git",
+  "author": "Thang Paisen",
+  "license": "MIT"
+}
