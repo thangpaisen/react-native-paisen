@@ -1,7 +1,7 @@
 module.exports = {
-  placeholderName: "rn_base_project",
+  placeholderName: "RNBaseProject",
 
-  titlePlaceholder: "rn_base_project",
+  titlePlaceholder: "RNBaseProject",
 
   templateDir: "./template"
 };

@@ -1,13 +1,14 @@
-import 'react-native-gesture-handler'
-import React from 'react'
-import { Provider } from 'react-redux'
-import ApplicationNavigator from '@/Navigators/Application'
-import store from '@/Store'
+import {StyleSheet, Text, View} from 'react-native';
+import React from 'react';
 
-const App = () => (
-  <Provider store={store}>
-    <ApplicationNavigator />
-  </Provider>
-)
+const App = () => {
+  return (
+    <View>
+      <Text>Hello world!</Text>
+    </View>
+  );
+};
 
-export default App
+export default App;
+
+const styles = StyleSheet.create({});
