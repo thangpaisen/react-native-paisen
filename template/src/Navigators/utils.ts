@@ -4,10 +4,7 @@
  *
  * You can add other navigation functions that you need and export them
  */
-import {
-  CommonActions,
-  createNavigationContainerRef,
-} from '@react-navigation/native'
+import { CommonActions, createNavigationContainerRef } from '@react-navigation/native'
 
 type RootStackParamList = {
   Splash: undefined
