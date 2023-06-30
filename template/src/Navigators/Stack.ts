@@ -1,3 +1,7 @@
-export { default as LoginView } from '@/Containers/LoginView'
-export { default as SplashView } from '@/Containers/SplashView'
-export { default as DetailScreen } from '@/Containers/DetailScreen'
+import ProfileScreen from '@/Containers/Profile/ProfileScreen'
+import LoginScreen from '@/Containers/Auth/Login/LoginScreen'
+import DetailScreen from '@/Containers/DetailScreen'
+import SplashScreen from '@/Containers/SplashScreen'
+import HomeScreen from '@/Containers/Home/HomeScreen'
+
+export { ProfileScreen, LoginScreen, DetailScreen, SplashScreen, HomeScreen }

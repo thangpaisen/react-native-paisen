@@ -1,4 +1,8 @@
 export default {
-  login: 'Login',
-  splash: 'Splash',
+  Login: 'Login',
+  Splash: 'Splash',
+  DetailScreen: 'DetailScreen',
+  HomeScreen: 'HomeScreen',
+  ProfileScreen: 'ProfileScreen',
+  MainBottomTab: 'MainBottomTab',
 }

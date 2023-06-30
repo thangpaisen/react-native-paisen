@@ -1,18 +1,18 @@
+import Icons from '@/Assets/Icons'
+import IconView from '@/Components/IconView'
+import { Texts } from '@/Constants'
 import { navigateAndSimpleReset } from '@/Navigators/utils'
 import React, { useEffect } from 'react'
-import { View, StyleSheet, Text } from 'react-native'
-import { SvgXml } from 'react-native-svg'
-import { Icons } from '@/Assets'
-import { Texts } from '@/Constants'
+import { StyleSheet, View } from 'react-native'
 
-const SplashView = () => {
+const SplashScreen = () => {
   const init = async () => {
     await new Promise((resolve) =>
       setTimeout(() => {
         resolve(true)
       }, 2000)
     )
-    navigateAndSimpleReset(Texts.login)
+    navigateAndSimpleReset(Texts.MainBottomTab)
   }
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const SplashView = () => {
 
   return (
     <View style={styles.container}>
-      <SvgXml xml={Icons.Logo} height={140} width={140} />
+      <IconView source={Icons.Logo} size={140} />
     </View>
   )
 }
@@ -36,4 +36,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default SplashView
+export default SplashScreen
