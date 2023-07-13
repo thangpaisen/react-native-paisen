@@ -25,7 +25,7 @@ const HomeScreen = () => {
 
   return (
     <View style={{ flex: 1 }}>
-      <View style={{ flex: 1, paddingBottom: 20 }}>
+      <View style={{ flex: 1 }}>
         <ScrollView indicatorStyle='white' contentContainerStyle={{ alignItems: 'center' }}>
           {data.map((item) => (
             <View key={item.id}>
