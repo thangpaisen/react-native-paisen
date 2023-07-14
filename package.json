@@ -4,5 +4,14 @@
   "description": "React Native Template Base",
   "repository": "https://github.com/thangquan/react-native-paisen.git",
   "author": "Thang Paisen",
+  "keywords": [
+    "react-native",
+    "template",
+    "react-native-base",
+    "react-native-template",
+    "react-native-template-paisen",
+    "rn-template",
+    "rn-base"
+  ],
   "license": "MIT"
 }
