@@ -13,5 +13,5 @@ npx react-native init MyApp --template react-native-template-paisen
 OR
 
 ```sh
-npx react-native init MyApp --template https://github.com/thangquan/react-native-paisen.git
+npx react-native init MyApp --template https://github.com/thangpaisen/react-native-paisen.git
 ```
