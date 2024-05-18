@@ -1,7 +1,7 @@
 import { Dimensions, Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native'
 import React, { useEffect } from 'react'
 import { useAppDispatch, useAppSelector } from '@/Hooks'
-import * as userActions from '@/Services/apis/users'
+import * as userActions from '@/Services/Apis/users'
 import { navigate, navigationRef } from '@/Navigators/utils'
 import { data } from '@/Constants/data'
 import { SharedElement } from 'react-navigation-shared-element'

@@ -1035,6 +1035,13 @@
   dependencies:
     regenerator-runtime "^0.13.11"
 
+"@babel/runtime@^7.23.2", "@babel/runtime@^7.23.9":
+  version "7.24.5"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.24.5.tgz#230946857c053a36ccc66e1dd03b17dd0c4ed02c"
+  integrity sha512-Nms86NXrsaeU9vbBJKni6gXiEXZ4CVpYVzEjDH9Sb8vmZ3UljyA1GSOJl/6LGPO8EHLuSF9H+IxNXHPX8QHJ4g==
+  dependencies:
+    regenerator-runtime "^0.14.0"
+
 "@babel/template@^7.0.0", "@babel/template@^7.18.10", "@babel/template@^7.20.7", "@babel/template@^7.3.3":
   version "7.20.7"
   resolved "https://registry.npmjs.org/@babel/template/-/template-7.20.7.tgz"
@@ -4178,6 +4185,13 @@ html-escaper@^2.0.0:
   resolved "https://registry.npmjs.org/html-escaper/-/html-escaper-2.0.2.tgz"
   integrity sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==
 
+html-parse-stringify@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/html-parse-stringify/-/html-parse-stringify-3.0.1.tgz#dfc1017347ce9f77c8141a507f233040c59c55d2"
+  integrity sha512-KknJ50kTInJ7qIScF3jeaFRpMpE8/lfiTdzf/twXyPBLAGrLRTmkz3AdTnKeh40X8k9L2fdYwEp/42WGXIRGcg==
+  dependencies:
+    void-elements "3.1.0"
+
 http-errors@2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/http-errors/-/http-errors-2.0.0.tgz"
@@ -4193,6 +4207,13 @@ human-signals@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/human-signals/-/human-signals-2.1.0.tgz"
   integrity sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==
+
+i18next@^23.11.4:
+  version "23.11.4"
+  resolved "https://registry.yarnpkg.com/i18next/-/i18next-23.11.4.tgz#3f0e620fd2cff3825324191615d0ab0a1eec3baf"
+  integrity sha512-CCUjtd5TfaCl+mLUzAA0uPSN+AVn4fP/kWCYt/hocPUwusTpMVczdrRyOBUwk6N05iH40qiKx6q1DoNJtBIwdg==
+  dependencies:
+    "@babel/runtime" "^7.23.2"
 
 ieee754@^1.1.13:
   version "1.2.1"
@@ -6284,6 +6305,14 @@ react-freeze@^1.0.0:
   resolved "https://registry.npmjs.org/react-freeze/-/react-freeze-1.0.3.tgz"
   integrity sha512-ZnXwLQnGzrDpHBHiC56TXFXvmolPeMjTn1UOm610M4EXGzbEDR7oOIyS2ZiItgbs6eZc4oU/a0hpk8PrcKvv5g==
 
+react-i18next@^14.1.1:
+  version "14.1.1"
+  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-14.1.1.tgz#3d942a99866555ae3552c40f9fddfa061e29d7f3"
+  integrity sha512-QSiKw+ihzJ/CIeIYWrarCmXJUySHDwQr5y8uaNIkbxoGRm/5DukkxZs+RPla79IKyyDPzC/DRlgQCABHtrQuQQ==
+  dependencies:
+    "@babel/runtime" "^7.23.9"
+    html-parse-stringify "^3.0.1"
+
 "react-is@^16.12.0 || ^17.0.0 || ^18.0.0", react-is@^18.0.0, react-is@^18.2.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react-is/-/react-is-18.2.0.tgz"
@@ -6594,6 +6623,11 @@ regenerator-runtime@^0.13.11, regenerator-runtime@^0.13.2:
   version "0.13.11"
   resolved "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.11.tgz"
   integrity sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==
+
+regenerator-runtime@^0.14.0:
+  version "0.14.1"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.14.1.tgz#356ade10263f685dda125100cd862c1db895327f"
+  integrity sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==
 
 regenerator-transform@^0.15.1:
   version "0.15.1"
@@ -7426,6 +7460,11 @@ typed-array-length@^1.0.4:
     for-each "^0.3.3"
     is-typed-array "^1.1.9"
 
+typesafe-actions@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/typesafe-actions/-/typesafe-actions-5.1.0.tgz#9afe8b1e6a323af1fd59e6a57b11b7dd6623d2f1"
+  integrity sha512-bna6Yi1pRznoo6Bz1cE6btB/Yy8Xywytyfrzu/wc+NFW3ZF0I+2iCGImhBsoYYCOWuICtRO4yHcnDlzgo1AdNg==
+
 typescript@4.8.4:
   version "4.8.4"
   resolved "https://registry.npmjs.org/typescript/-/typescript-4.8.4.tgz"
@@ -7563,6 +7602,11 @@ vlq@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npmjs.org/vlq/-/vlq-1.0.1.tgz"
   integrity sha512-gQpnTgkubC6hQgdIcRdYGDSDc+SaujOdyesZQMv6JlfQee/9Mp0Qhnys6WxDWvQnL5WZdT7o2Ul187aSt0Rq+w==
+
+void-elements@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-3.1.0.tgz#614f7fbf8d801f0bb5f0661f5b2f5785750e4f09"
+  integrity sha512-Dhxzh5HZuiHQhbvTW9AMetFfBHDMYpo23Uo9btPXgdYP+3T5S+p+jgNy7spra+veYhBP2dCSgxR/i2Y02h5/6w==
 
 walker@^1.0.7, walker@^1.0.8:
   version "1.0.8"

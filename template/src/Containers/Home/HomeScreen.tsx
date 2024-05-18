@@ -2,7 +2,7 @@ import { Images } from '@/Assets'
 import { data } from '@/Constants/data'
 import { useAppDispatch, useAppSelector } from '@/Hooks'
 import { navigate } from '@/Navigators/utils'
-import * as userActions from '@/Services/apis/users'
+import { getListMovie } from '@/Services/Apis/movies'
 import React, { useEffect } from 'react'
 import { Dimensions, Image, Pressable, ScrollView, StyleSheet, View } from 'react-native'
 import { SharedElement } from 'react-navigation-shared-element'
@@ -13,15 +13,18 @@ const ITEM_HEIGHT = ITEM_WIDTH * 0.9
 
 const HomeScreen = () => {
   const dispatch = useAppDispatch()
-  const user = useAppSelector((state) => state.user)
-
-  const getData = async () => {
-    const data = await dispatch(userActions.getListMovie())
-  }
+  const movie = useAppSelector((state) => state.movie.data)
 
   useEffect(() => {
     getData()
   }, [])
+
+  const getData = async () => {
+    dispatch(getListMovie()).then((res: any) => {
+      if (!res.payload) {
+      }
+    })
+  }
 
   return (
     <View style={{ flex: 1 }}>

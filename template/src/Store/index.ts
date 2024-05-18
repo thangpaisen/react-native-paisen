@@ -1,6 +1,6 @@
 import thunk from 'redux-thunk'
 import { configureStore } from '@reduxjs/toolkit'
-import rootReducer from '@/Services/reducers'
+import rootReducer from '@/Services/Reducers'
 import axios from 'axios'
 import axiosMiddleware from 'redux-axios-middleware'
 import { HOST } from '@/Services/endpoints'
@@ -54,7 +54,7 @@ const apiMiddleware = {
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
-  //   whitelist: ['user'], // only navigation will be persisted
+  whitelist: ['user'], // only navigation will be persisted
   //   blacklist: ['navigation'] // navigation will not be persisted
 }
 

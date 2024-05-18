@@ -4,10 +4,12 @@ import { Images } from '@/Assets'
 import { Fonts } from '@/Constants'
 import Toast from 'react-native-toast-message'
 import Icon from 'react-native-vector-icons/Ionicons'
+import { useTranslation } from 'react-i18next'
 
 type Props = {}
 
 const ProfileScreen = (props: Props) => {
+  const { t: lang } = useTranslation()
   return (
     <View
       style={{
@@ -20,7 +22,7 @@ const ProfileScreen = (props: Props) => {
           fontSize: 20,
         }}
       >
-        ProfileScreen
+        {lang('common.profile')}
       </Text>
       <TouchableOpacity
         style={styles.btn}

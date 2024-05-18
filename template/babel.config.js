@@ -6,20 +6,20 @@ const plugins = [
       root: ['./src'],
       extensions: ['.js', '.json'],
       alias: {
-        '@': './src'
-      }
-    }
+        '@': './src',
+      },
+    },
   ],
   'react-native-reanimated/plugin',
   [
     'babel-plugin-inline-import',
     {
-      extensions: ['.svg']
-    }
-  ]
+      extensions: ['.svg'],
+    },
+  ],
 ]
 
 module.exports = {
   presets,
-  plugins
+  plugins,
 }

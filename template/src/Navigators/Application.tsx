@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { SafeAreaView, StatusBar, StyleSheet } from 'react-native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native'
@@ -8,19 +8,31 @@ import { createSharedElementStackNavigator } from 'react-navigation-shared-eleme
 import { Texts } from '@/Constants'
 import MainBottomTab from './MainBottomTab'
 import DetailScreen from '../Containers/DetailScreen'
+import { useAppSelector } from '@/Hooks'
+import i18n from '@/I18n'
 
 const Stack = createSharedElementStackNavigator()
 
+const options = {
+  headerBackTitleVisible: false,
+  cardStyleInterpolator: ({ current: { progress } }: any) => {
+    return {
+      cardStyle: {
+        opacity: progress,
+      },
+    }
+  },
+}
+
 const ApplicationNavigator = () => {
-  const options = {
-    headerBackTitleVisible: false,
-    cardStyleInterpolator: ({ current: { progress } }: any) => {
-      return {
-        cardStyle: {
-          opacity: progress,
-        },
-      }
-    },
+  const language = useAppSelector((state) => state.user.language)
+
+  useEffect(() => {
+    getLanguage()
+  }, [])
+
+  const getLanguage = () => {
+    i18n.changeLanguage(language)
   }
 
   return (
