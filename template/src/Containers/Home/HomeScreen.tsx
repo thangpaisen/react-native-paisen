@@ -1,11 +1,9 @@
-import { Images } from '@/Assets'
 import { data } from '@/Constants/data'
 import { useAppDispatch, useAppSelector } from '@/Hooks'
 import { navigate } from '@/Navigators/utils'
 import { getListMovie } from '@/Services/Apis/movies'
 import React, { useEffect } from 'react'
 import { Dimensions, Image, Pressable, ScrollView, StyleSheet, View } from 'react-native'
-import { SharedElement } from 'react-navigation-shared-element'
 const { width } = Dimensions.get('screen')
 
 const ITEM_WIDTH = width * 0.9
@@ -38,17 +36,15 @@ const HomeScreen = () => {
                   navigate({ name: 'DetailScreen', params: { item } })
                 }}
               >
-                <SharedElement id={`item.${item.id}.image_url`}>
-                  <Image
-                    style={{
-                      borderRadius: 14,
-                      width: ITEM_WIDTH,
-                      height: ITEM_HEIGHT,
-                    }}
-                    source={{ uri: item.image_url }}
-                    resizeMode='cover'
-                  />
-                </SharedElement>
+                <Image
+                  style={{
+                    borderRadius: 14,
+                    width: ITEM_WIDTH,
+                    height: ITEM_HEIGHT,
+                  }}
+                  source={{ uri: item.image_url }}
+                  resizeMode='cover'
+                />
               </Pressable>
             </View>
           ))}

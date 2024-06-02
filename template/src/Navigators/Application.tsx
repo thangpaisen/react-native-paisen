@@ -1,28 +1,16 @@
-import React, { useEffect } from 'react'
-import { SafeAreaView, StatusBar, StyleSheet } from 'react-native'
-import { createStackNavigator } from '@react-navigation/stack'
-import { NavigationContainer, DefaultTheme } from '@react-navigation/native'
-import { SplashScreen, LoginScreen } from '@/Navigators/Stack'
-import { navigationRef } from './utils'
-import { createSharedElementStackNavigator } from 'react-navigation-shared-element'
 import { Texts } from '@/Constants'
-import MainBottomTab from './MainBottomTab'
-import DetailScreen from '../Containers/DetailScreen'
 import { useAppSelector } from '@/Hooks'
 import i18n from '@/I18n'
+import { LoginScreen, SplashScreen } from '@/Navigators/Stack'
+import { DefaultTheme, NavigationContainer } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
+import React, { useEffect } from 'react'
+import { SafeAreaView, StatusBar, StyleSheet } from 'react-native'
+import MainBottomTab from './MainBottomTab'
+import { navigationRef } from './utils'
+import { ScreenName } from '@/Constants/Texts'
 
-const Stack = createSharedElementStackNavigator()
-
-const options = {
-  headerBackTitleVisible: false,
-  cardStyleInterpolator: ({ current: { progress } }: any) => {
-    return {
-      cardStyle: {
-        opacity: progress,
-      },
-    }
-  },
-}
+const Stack = createStackNavigator()
 
 const ApplicationNavigator = () => {
   const language = useAppSelector((state) => state.user.language)
@@ -39,15 +27,13 @@ const ApplicationNavigator = () => {
     <SafeAreaView style={styles.container}>
       <NavigationContainer ref={navigationRef} theme={MyTheme}>
         <StatusBar barStyle={'dark-content'} />
-        <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName={Texts.Splash}>
-          <Stack.Screen name={Texts.Splash} component={SplashScreen} />
-          <Stack.Screen name={Texts.Login} component={LoginScreen} />
-          <Stack.Screen name={Texts.MainBottomTab} component={MainBottomTab} />
-          <Stack.Screen
-            name={Texts.DetailScreen}
-            component={DetailScreen}
-            options={() => options}
-          />
+        <Stack.Navigator
+          screenOptions={{ headerShown: false }}
+          initialRouteName={ScreenName.SplashScreen}
+        >
+          <Stack.Screen name={ScreenName.SplashScreen} component={SplashScreen} />
+          <Stack.Screen name={ScreenName.LoginScreen} component={LoginScreen} />
+          <Stack.Screen name={ScreenName.MainBottomTab} component={MainBottomTab} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>

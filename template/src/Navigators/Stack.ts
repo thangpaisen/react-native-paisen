@@ -1,7 +1,5 @@
-import ProfileScreen from '@/Containers/Profile/ProfileScreen'
-import LoginScreen from '@/Containers/Auth/Login/LoginScreen'
-import DetailScreen from '@/Containers/DetailScreen'
-import SplashScreen from '@/Containers/SplashScreen'
-import HomeScreen from '@/Containers/Home/HomeScreen'
-
-export { ProfileScreen, LoginScreen, DetailScreen, SplashScreen, HomeScreen }
+export { default as ProfileScreen } from '@/Containers/Profile/ProfileScreen'
+export { default as LoginScreen } from '@/Containers/Auth/Login/LoginScreen'
+export { default as SplashScreen } from '@/Containers/Splash/SplashScreen'
+export { default as HomeScreen } from '@/Containers/Home/HomeScreen'
+export { default as MainBottomTab } from './MainBottomTab'
