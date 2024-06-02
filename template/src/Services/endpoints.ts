@@ -1,5 +1,5 @@
-export const HOST = 'https://api.themoviedb.org/3/'
+export const HOST = 'https://nettrom.com/api/v2/'
 
-export const requestToken = 'authentication/token/new'
-export const login = 'authentication/token/validate_with_login'
-export const requestSession = 'authentication/session/new'
+export const requestToken = 'requestToken'
+export const login = 'login'
+export const home = 'home_a'

@@ -1,9 +1,9 @@
 import { Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { HomeScreen, ProfileScreen } from '@Navigators/Stack'
 import Icon from 'react-native-vector-icons/Ionicons'
 import { Colors, Texts } from '@Constants'
+import { HomeScreen, ProfileScreen } from './Stack'
 
 type Props = {}
 
