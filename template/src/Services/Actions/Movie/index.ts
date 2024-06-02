@@ -1,5 +1,4 @@
-import { User } from '@/Type'
-import { MovieResponse } from '@/Type/Movie/indes'
+import { MovieResponse } from '@Type/Movie/index'
 import { createAction } from '@reduxjs/toolkit'
 
 // Định nghĩa các actions với payload

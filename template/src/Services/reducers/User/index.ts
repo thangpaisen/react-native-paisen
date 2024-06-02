@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { User } from '@/Type'
-import { LOGIN_SUCCESS } from '@/Services/Actions/User'
+import { LOGIN_SUCCESS } from '@Services/Actions/User'
+import { User } from '@Type/User'
 
 export interface UserState {
   token: string

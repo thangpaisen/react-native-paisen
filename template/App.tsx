@@ -1,5 +1,5 @@
-import ApplicationNavigator from '@/Navigators/Application'
-import store, { persistor } from '@/Store'
+import ApplicationNavigator from '@Navigators/Application'
+import store, { persistor } from '@Store'
 import React from 'react'
 import 'react-native-gesture-handler'
 import Toast from 'react-native-toast-message'

@@ -1,7 +1,7 @@
-import Icons from '@/Assets/Icons'
-import IconView from '@/Components/IconView'
-import { Texts } from '@/Constants'
-import { navigateAndSimpleReset } from '@/Navigators/utils'
+import Icons from '@Assets/Icons'
+import IconView from '@Components/IconView'
+import Texts from '@Constants/Texts'
+import { navigateAndSimpleReset } from '@Navigators/utils'
 import React, { useEffect } from 'react'
 import { StyleSheet, View } from 'react-native'
 

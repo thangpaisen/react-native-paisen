@@ -1,12 +1,12 @@
 import thunk from 'redux-thunk'
 import { configureStore } from '@reduxjs/toolkit'
-import rootReducer from '@/Services/Reducers'
 import axios from 'axios'
 import axiosMiddleware from 'redux-axios-middleware'
-import { HOST } from '@/Services/endpoints'
 import get from 'lodash/get'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { persistStore, persistReducer } from 'redux-persist'
+import { HOST } from '@Services/endpoints'
+import rootReducer from '@Services/Reducers'
 
 const client = axios.create({
   //all axios can be used, shown in axios documentation

@@ -1,4 +1,4 @@
-import * as Endpoints from '@/Services/endpoints'
+import * as Endpoints from '@Services/endpoints'
 import { AxiosRequestConfig } from 'axios'
 import {
   GET_LIST_MOVIE_ERROR,

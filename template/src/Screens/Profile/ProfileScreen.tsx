@@ -1,7 +1,6 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
-import { Images } from '@/Assets'
-import { Fonts } from '@/Constants'
+import { Fonts } from '@Constants'
 import Toast from 'react-native-toast-message'
 import Icon from 'react-native-vector-icons/Ionicons'
 import { useTranslation } from 'react-i18next'
@@ -29,7 +28,7 @@ const ProfileScreen = (props: Props) => {
         onPress={() => {
           Toast.show({
             type: 'success',
-            text1: 'Hello',
+            text1: 'Hello' + Date.now(),
             text2: 'This is some something 👋',
             onPress: () => {
               Toast.hide()

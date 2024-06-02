@@ -1,5 +1,5 @@
-import { User } from '@/Type'
 import { createAction } from '@reduxjs/toolkit'
+import { User } from '@Type/User'
 
 // Định nghĩa các actions với payload
 export const REQUEST_LOGIN = createAction('REQUEST_LOGIN')

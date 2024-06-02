@@ -11,9 +11,20 @@
     "noEmit": true,
     "strict": true,
     "target": "esnext",
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@Assets/*": ["src/Assets/*"],
+      "@Components/*": ["src/Components/*"],
+      "@Constants": ["src/Constants"],
+      "@Screens/*": ["src/Screens/*"],
+      "@Hooks": ["src/Hooks"],
+      "@I18n": ["src/I18n"],
+      "@Model": ["src/Model"],
+      "@Utils/*": ["src/Utils/*"],
+      "@Services/*": ["src/Services/*"],
+      "@Store": ["src/Store"],
+      "@Type/*": ["src/Type/*"],
+      "@Navigators/*": ["src/Navigators/*"]
     }
   },
   "exclude": [

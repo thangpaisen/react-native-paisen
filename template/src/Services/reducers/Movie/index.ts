@@ -1,8 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { User } from '@/Type'
-import { LOGIN_SUCCESS } from '@/Services/Actions/User'
-import { GET_LIST_MOVIE_SUCCESS } from '@/Services/Actions/Movie'
-import { Movie } from '@/Type/Movie/indes'
+import { LOGIN_SUCCESS } from '@Services/Actions/User'
+import { GET_LIST_MOVIE_SUCCESS } from '@Services/Actions/Movie'
+import { Movie } from '@Type/Movie/index'
 
 export interface MovieState {
   isLoading: boolean

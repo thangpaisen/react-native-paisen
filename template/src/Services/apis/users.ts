@@ -1,4 +1,4 @@
-import * as Endpoints from '@/Services/endpoints'
+import * as Endpoints from '@Services/endpoints'
 import { AxiosRequestConfig } from 'axios'
 
 export const getListMovie = (): any => ({
