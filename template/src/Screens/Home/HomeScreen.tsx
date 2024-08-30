@@ -1,15 +1,11 @@
 import ButtonView from '@Components/ButtonView'
 import TextView from '@Components/TextView'
 import { useAppDispatch, useAppSelector } from '@Hooks'
-import { navigate } from '@Navigators/utils'
 import { getListMovie } from '@Services/Apis/movies'
 import { APP_PADDING } from '@Utils/Utils'
 import React, { useEffect } from 'react'
-import { Dimensions, Image, Pressable, ScrollView, StyleSheet, View } from 'react-native'
+import { Dimensions, StyleSheet, View } from 'react-native'
 const { width } = Dimensions.get('screen')
-
-const ITEM_WIDTH = width * 0.9
-const ITEM_HEIGHT = ITEM_WIDTH * 0.9
 
 const HomeScreen = () => {
   const dispatch = useAppDispatch()
