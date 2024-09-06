@@ -1,5 +1,5 @@
 import Icons from '@Assets/Icons'
-import IconView from '@Components/IconView'
+import IconSvgCM from '@Components/IconSvg'
 import { Texts } from '@Constants'
 import { navigateAndSimpleReset } from '@Navigators/utils'
 import React, { useEffect } from 'react'
@@ -21,7 +21,7 @@ const SplashScreen = () => {
 
   return (
     <View style={styles.container}>
-      <IconView source={Icons.Logo} size={140} />
+      <IconSvgCM source={Icons.Logo} size={140} />
     </View>
   )
 }

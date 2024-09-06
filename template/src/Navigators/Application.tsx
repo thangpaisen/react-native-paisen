@@ -22,19 +22,17 @@ const ApplicationNavigator = () => {
   }
 
   return (
-    <SafeAreaView style={styles.container}>
-      <NavigationContainer ref={navigationRef} theme={MyTheme}>
-        <StatusBar barStyle={'dark-content'} />
-        <Stack.Navigator
-          screenOptions={{ headerShown: false }}
-          initialRouteName={ScreenName.SplashScreen}
-        >
-          <Stack.Screen name={ScreenName.SplashScreen} component={SplashScreen} />
-          <Stack.Screen name={ScreenName.LoginScreen} component={LoginScreen} />
-          <Stack.Screen name={ScreenName.MainBottomTab} component={MainBottomTab} />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </SafeAreaView>
+    <NavigationContainer ref={navigationRef} theme={MyTheme}>
+      <StatusBar barStyle={'dark-content'} />
+      <Stack.Navigator
+        screenOptions={{ headerShown: false }}
+        initialRouteName={ScreenName.SplashScreen}
+      >
+        <Stack.Screen name={ScreenName.SplashScreen} component={SplashScreen} />
+        <Stack.Screen name={ScreenName.LoginScreen} component={LoginScreen} />
+        <Stack.Screen name={ScreenName.MainBottomTab} component={MainBottomTab} />
+      </Stack.Navigator>
+    </NavigationContainer>
   )
 }
 

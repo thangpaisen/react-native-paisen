@@ -1,8 +1,9 @@
+import TextCM from '@Components/Text'
 import { Colors } from '@Constants'
 import React from 'react'
 import { StyleSheet, TextStyle, TouchableOpacity, ViewStyle } from 'react-native'
-import TextView from './TextView'
-interface ButtonViewProp {
+
+interface ButtonCMProp {
   label?: string
   containerStyle?: ViewStyle
   labelStyle?: TextStyle
@@ -13,7 +14,7 @@ interface ButtonViewProp {
   disabled?: boolean
 }
 
-const ButtonView = ({
+const ButtonCM = ({
   onPress,
   label,
   containerStyle,
@@ -22,7 +23,7 @@ const ButtonView = ({
   labelStyle,
   bold,
   disabled,
-}: ButtonViewProp) => {
+}: ButtonCMProp) => {
   const onPressButton = () => {
     onPress?.()
   }
@@ -37,22 +38,24 @@ const ButtonView = ({
         ...containerStyle,
       }}
     >
-      <TextView bold={bold} color={labelColor} style={[styles.txtLabel, labelStyle]}>
+      <TextCM bold={bold} color={labelColor} style={[styles.txtLabel, labelStyle]}>
         {label}
-      </TextView>
+      </TextCM>
     </TouchableOpacity>
   )
 }
 
-export default ButtonView
+export default ButtonCM
 
 const styles = StyleSheet.create({
   container: {
-    height: 36,
+    height: 40,
     borderRadius: 8,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: Colors.primary,
   },
-  txtLabel: {},
+  txtLabel: {
+    color: '#fff',
+  },
 })

@@ -10,10 +10,10 @@ type Props = {
   height?: number
 }
 
-const IconView = ({ source, size = 20, color, width, height }: Props) => {
+const IconSvgCM = ({ source, size = 20, color, width, height }: Props) => {
   return <SvgXml xml={source} height={height || size} width={width || size} color={color} />
 }
 
-export default IconView
+export default IconSvgCM
 
 const styles = StyleSheet.create({})
