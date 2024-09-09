@@ -4,13 +4,14 @@ import { useAppDispatch, useAppSelector } from '@Hooks'
 import { getListMovie } from '@Services/Apis/movies'
 import { APP_PADDING } from '@Utils/Utils'
 import React, { useEffect } from 'react'
-import { Dimensions, SafeAreaView, StyleSheet, View } from 'react-native'
+import { SafeAreaView, StyleSheet, View } from 'react-native'
 import Toast from 'react-native-toast-message'
 import Icon from 'react-native-vector-icons/Ionicons'
 
 const HomeScreen = () => {
   const dispatch = useAppDispatch()
   const movie = useAppSelector((state) => state.movie.data)
+  console.log('movie: ', movie)
 
   useEffect(() => {
     getData()

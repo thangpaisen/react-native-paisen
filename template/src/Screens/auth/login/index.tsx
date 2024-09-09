@@ -3,7 +3,7 @@ import React from 'react'
 
 const LoginScreen = () => {
   return (
-    <View>
+    <View style={styles.ctn}>
       <Text>LoginScreen</Text>
     </View>
   )
@@ -11,4 +11,8 @@ const LoginScreen = () => {
 
 export default LoginScreen
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  ctn: {
+    flex: 1,
+  },
+})

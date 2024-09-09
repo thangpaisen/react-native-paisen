@@ -1,4 +1,3 @@
-import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { SvgXml } from 'react-native-svg'
 
@@ -15,5 +14,3 @@ const IconSvgCM = ({ source, size = 20, color, width, height }: Props) => {
 }
 
 export default IconSvgCM
-
-const styles = StyleSheet.create({})

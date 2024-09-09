@@ -1,7 +1,7 @@
-import { StyleSheet, Text, TextStyle, TouchableOpacity, View, ViewStyle } from 'react-native'
-import React from 'react'
 import TextCM from '@Components/Text'
 import { useNavigation } from '@react-navigation/native'
+import React from 'react'
+import { StyleSheet, TextStyle, TouchableOpacity, View, ViewStyle } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 
 type Props = {
