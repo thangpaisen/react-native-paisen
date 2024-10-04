@@ -1,21 +1,19 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { LOGIN_SUCCESS } from '@Services/Actions/User'
-import { User } from '@Type/User'
+import UserModel from 'src/Model/UserModel'
 
 export interface UserState {
   token: string
-  currentUser: User | null
+  user: UserModel | null
   isLoading: boolean
-  signing: boolean
   language: string
 }
 
 export const initialState: UserState = {
   token: '',
-  currentUser: null,
-  signing: false,
+  user: null,
   isLoading: false,
-  language: 'en',
+  language: 'vi',
 }
 
 const userSlice = createSlice({
@@ -25,15 +23,20 @@ const userSlice = createSlice({
     setLanguage: (state, action) => {
       state.language = action.payload
     },
+    updateUser: (state, action) => {
+      state.user = action.payload
+    },
+    logoutUser: (state) => {
+      state.user = null
+    },
   },
   extraReducers: (builder) => {
-    builder.addCase(LOGIN_SUCCESS, (state, action) => {
-      state.signing = false
-      state.currentUser = action.payload
+    builder.addCase(LOGIN_SUCCESS, (state, action: any) => {
+      state.user = action.payload
     })
   },
 })
 
-export const { setLanguage } = userSlice.actions
+export const { setLanguage, updateUser, logoutUser } = userSlice.actions
 
 export default userSlice.reducer
