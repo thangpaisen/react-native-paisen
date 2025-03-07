@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { LOGIN_SUCCESS } from '@Services/Actions/User'
 import { GET_LIST_MOVIE_SUCCESS } from '@Services/Actions/Movie'
 import { Movie } from '@Type/Movie/index'
 
@@ -17,7 +16,7 @@ const movieSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {
-    resetData: (state, action) => {
+    resetData: (state) => {
       state.data = []
     },
   },

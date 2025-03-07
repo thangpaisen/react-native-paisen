@@ -6,7 +6,7 @@ export const getListMovie = (): any => ({
   payload: {
     request: {
       method: 'GET',
-      url: 'https://reactnative.dev/movies.json',
+      url: Endpoints.home,
     } as AxiosRequestConfig,
   },
 })

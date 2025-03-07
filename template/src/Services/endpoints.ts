@@ -1,5 +1,5 @@
-export const HOST = 'https://nettrom.com/api/v2/'
+export const HOST = 'https://reactnative.dev/'
 
 export const requestToken = 'requestToken'
 export const login = 'login'
-export const home = 'home_a'
+export const home = 'movies.json'

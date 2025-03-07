@@ -1,6 +1,6 @@
-import { StyleSheet, Text, TextProps, TextStyle, View } from 'react-native'
-import React, { ReactNode } from 'react'
 import { Colors, Fonts } from '@Constants'
+import React, { ReactNode } from 'react'
+import { StyleSheet, Text, TextStyle } from 'react-native'
 
 type Props = {
   fontSize?: number
@@ -11,7 +11,7 @@ type Props = {
   numberOfLines?: number
 }
 
-const TextView = ({ fontSize, style, bold, color, children, numberOfLines, ...props }: Props) => {
+const TextCM = ({ fontSize, style, bold, color, children, numberOfLines, ...props }: Props) => {
   return (
     <Text
       style={[
@@ -31,7 +31,7 @@ const TextView = ({ fontSize, style, bold, color, children, numberOfLines, ...pr
   )
 }
 
-export default TextView
+export default TextCM
 
 const styles = StyleSheet.create({
   txtText: {
