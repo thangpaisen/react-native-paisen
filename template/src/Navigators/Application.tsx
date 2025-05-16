@@ -1,13 +1,13 @@
+import { ScreenName } from '@Constants'
 import { useAppSelector } from '@Hooks'
 import i18n from '@I18n'
 import { LoginScreen, SplashScreen } from '@Navigators/Stack'
 import { DefaultTheme, NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import React, { useEffect } from 'react'
-import { SafeAreaView, StatusBar, StyleSheet } from 'react-native'
+import { StatusBar } from 'react-native'
 import MainBottomTab from './MainBottomTab'
 import { navigationRef } from './utils'
-import { ScreenName } from '@Constants'
 const Stack = createStackNavigator()
 
 const ApplicationNavigator = () => {
@@ -35,12 +35,6 @@ const ApplicationNavigator = () => {
     </NavigationContainer>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-})
 
 const MyTheme = {
   ...DefaultTheme,

@@ -1,7 +1,6 @@
 import ApplicationNavigator from '@Navigators/Application'
 import store, { persistor } from '@Store'
 import React from 'react'
-import { SafeAreaView } from 'react-native'
 import 'react-native-gesture-handler'
 import Toast from 'react-native-toast-message'
 import { Provider } from 'react-redux'
