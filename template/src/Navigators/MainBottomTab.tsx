@@ -1,15 +1,12 @@
-import { Image, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import Icon from 'react-native-vector-icons/Ionicons'
 import { Colors, Texts } from '@Constants'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import React from 'react'
+import Icon from 'react-native-vector-icons/Ionicons'
 import { HomeScreen, ProfileScreen } from './Stack'
-
-type Props = {}
 
 const Tab = createBottomTabNavigator()
 
-const MainBottomTab = (props: Props) => {
+const MainBottomTab = () => {
   return (
     <Tab.Navigator
       initialRouteName={Texts.HomeScreen}
@@ -21,7 +18,8 @@ const MainBottomTab = (props: Props) => {
           borderTopColor: Colors.colorA3A9AC,
         },
 
-        tabBarIcon: ({ focused, color, size }) => {
+        // eslint-disable-next-line react/no-unstable-nested-components
+        tabBarIcon: ({ focused }) => {
           let iconName = ''
           let focusedColor = focused ? Colors.blue : Colors.colorA3A9AC
           if (route.name === Texts.HomeScreen) {
@@ -48,5 +46,3 @@ const MainBottomTab = (props: Props) => {
 }
 
 export default MainBottomTab
-
-const styles = StyleSheet.create({})
