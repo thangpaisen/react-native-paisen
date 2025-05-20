@@ -1,5 +1,5 @@
 import Icons from '@Assets/Icons'
-import IconSvgCM from '@Components/IconSvg'
+import { IconSvgCM } from '@Components'
 import { Texts } from '@Constants'
 import { navigateAndSimpleReset } from '@Navigators/utils'
 import React, { useEffect } from 'react'

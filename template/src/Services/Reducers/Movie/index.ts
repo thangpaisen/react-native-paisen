@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { GET_LIST_MOVIE_SUCCESS } from '@Services/Actions/Movie'
-import { Movie } from '@Type/Movie/index'
+import { Movie } from '@Type/Movie'
 
 export interface MovieState {
   isLoading: boolean

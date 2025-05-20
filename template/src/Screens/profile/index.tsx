@@ -1,7 +1,7 @@
 import React from 'react'
 import { SafeAreaView, StyleSheet } from 'react-native'
-import HeaderCM from '@Components/Header'
 import { useTranslation } from 'react-i18next'
+import { HeaderCM } from '@Components'
 
 const ProfileScreen = () => {
   const { t: lang } = useTranslation()

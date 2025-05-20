@@ -1,5 +1,4 @@
-import HeaderCM from '@Components/Header'
-import { ButtonCM, TextCM } from '@Components/index'
+import { ButtonCM, CheckBoxCM, TextCM, HeaderCM } from '@Components'
 import { useAppDispatch, useAppSelector } from '@Hooks'
 import { getListMovie } from '@Services/Apis/movies'
 import { APP_PADDING } from '@Utils/Utils'
@@ -12,6 +11,8 @@ const HomeScreen = () => {
   const dispatch = useAppDispatch()
   const movie = useAppSelector((state) => state.movie.data)
   console.log('movie: ', movie)
+
+  const [checked, setChecked] = React.useState(false)
 
   useEffect(() => {
     getData()
@@ -48,7 +49,7 @@ const HomeScreen = () => {
             })
           }}
         />
-
+        <CheckBoxCM title='Check me' checked={checked} onPress={() => setChecked(!checked)} />
         <Icon name='home' size={20} />
       </View>
     </SafeAreaView>

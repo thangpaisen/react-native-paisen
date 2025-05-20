@@ -1,4 +1,4 @@
-import { MovieResponse } from '@Type/Movie/index'
+import { MovieResponse } from '@Type/Movie'
 import { createAction } from '@reduxjs/toolkit'
 
 // Định nghĩa các actions với payload

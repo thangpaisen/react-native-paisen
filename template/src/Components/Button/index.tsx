@@ -1,7 +1,7 @@
-import TextCM from '@Components/Text'
 import { Colors } from '@Constants'
 import React from 'react'
 import { StyleSheet, TextStyle, TouchableOpacity, ViewStyle } from 'react-native'
+import { TextCM } from '@Components'
 
 interface ButtonCMProp {
   label?: string

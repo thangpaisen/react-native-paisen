@@ -14,7 +14,7 @@
     "baseUrl": ".",
     "paths": {
       "@Assets/*": ["src/Assets/*"],
-      "@Components/*": ["src/Components/*"],
+      "@Components": ["src/Components"],
       "@Constants": ["src/Constants"],
       "@Screens/*": ["src/Screens/*"],
       "@Hooks": ["src/Hooks"],
