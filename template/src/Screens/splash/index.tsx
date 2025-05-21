@@ -10,7 +10,7 @@ const SplashScreen = () => {
     await new Promise((resolve) =>
       setTimeout(() => {
         resolve(true)
-      }, 2000)
+      }, 1000)
     )
     navigateAndSimpleReset(Texts.MainBottomTab)
   }

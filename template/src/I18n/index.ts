@@ -1,22 +1,6 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import * as resources from './Languages'
-import { NativeModules, Platform } from 'react-native'
-
-const getLanguageCode = () => {
-  let locale = 'vi' // default language
-  if (Platform.OS === 'android') {
-    locale = NativeModules.I18nManager.localeIdentifier
-  } else {
-    locale = NativeModules.SettingsManager.settings.AppleLocale
-  }
-
-  if (!locale) {
-    locale = NativeModules.SettingsManager.settings.AppleLanguages[0]
-  }
-
-  return locale.replace('_', '-')
-}
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -30,7 +14,7 @@ i18n.use(initReactI18next).init({
       {}
     ),
   },
-  lng: getLanguageCode(),
+  lng: 'vi',
   compatibilityJSON: 'v3',
 })
 

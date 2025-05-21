@@ -21,13 +21,13 @@ const plugins = [
       },
     },
   ],
-  'react-native-reanimated/plugin',
   [
     'babel-plugin-inline-import',
     {
       extensions: ['.svg'],
     },
   ],
+  'react-native-reanimated/plugin',
 ]
 
 module.exports = {
