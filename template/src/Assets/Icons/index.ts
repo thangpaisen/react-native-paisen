@@ -1,7 +1,15 @@
 import Logo from './logo.svg'
-import CalendarIcon from './ic_calendar.svg'
+import IcCalendar from './ic_calendar.svg'
+import IcCheckBoxCheck from './ic_checkbox_check.svg'
+import IcCheckBoxUnchecked from './ic_checkbox_unchecked.svg'
+import IcRadioChecked from './ic_radio_button_checked.svg'
+import IcRadioUnchecked from './ic_radio_button_unchecked.svg'
 
 export default {
   Logo,
-  CalendarIcon,
+  IcCalendar,
+  IcCheckBoxCheck,
+  IcCheckBoxUnchecked,
+  IcRadioChecked,
+  IcRadioUnchecked,
 }

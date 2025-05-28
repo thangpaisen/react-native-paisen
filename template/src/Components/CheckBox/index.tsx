@@ -1,12 +1,11 @@
 import { Colors } from '@Constants'
 import React from 'react'
-import { StyleSheet } from 'react-native'
-import { CheckBox } from 'react-native-elements'
+import { StyleSheet, TouchableOpacity } from 'react-native'
+import { IconSvgCM, TextCM } from '@Components'
+import Icons from '@Assets/Icons'
 
 interface Props {
   title?: string
-  checkedIcon?: string
-  uncheckedIcon?: string
   checked?: boolean
   onPress?: () => void
   containerStyle?: object
@@ -17,8 +16,6 @@ interface Props {
 
 const CheckBoxCM = ({
   title,
-  checkedIcon,
-  uncheckedIcon,
   checked,
   onPress,
   containerStyle,
@@ -26,22 +23,30 @@ const CheckBoxCM = ({
   radio = false,
   iconRight = false,
 }: Props) => {
+  const getIcon = () => {
+    const iconProps = checked
+      ? radio
+        ? { source: Icons.IcRadioChecked, color: Colors.primary }
+        : { source: Icons.IcCheckBoxCheck, color: Colors.primary }
+      : radio
+      ? { source: Icons.IcRadioUnchecked, color: Colors.black }
+      : { source: Icons.IcCheckBoxUnchecked, color: Colors.black }
+
+    return <IconSvgCM {...iconProps} />
+  }
+
   return (
-    <CheckBox
-      center
-      title={title}
-      checkedIcon={checkedIcon}
-      uncheckedIcon={uncheckedIcon}
-      checked={checked}
+    <TouchableOpacity
+      style={[
+        styles.container,
+        containerStyle,
+        iconRight ? { flexDirection: 'row-reverse' } : { flexDirection: 'row' },
+      ]}
       onPress={onPress}
-      containerStyle={{
-        ...styles.container,
-        ...containerStyle,
-      }}
-      textStyle={{ ...styles.text, ...textStyle }}
-      iconRight={iconRight}
-      {...(radio && { checkedIcon: 'dot-circle-o', uncheckedIcon: 'circle-o' })}
-    />
+    >
+      {getIcon()}
+      <TextCM style={[styles.text, textStyle]}>{title}</TextCM>
+    </TouchableOpacity>
   )
 }
 
@@ -49,16 +54,8 @@ export default CheckBoxCM
 
 const styles = StyleSheet.create({
   container: {
-    borderWidth: 0,
-    gap: 0,
-    padding: 0,
-    margin: 0,
-    backgroundColor: 'transparent',
+    alignItems: 'center',
+    gap: 2,
   },
-  text: {
-    fontSize: 14,
-    color: Colors.black,
-    fontWeight: '400',
-    marginLeft: 6,
-  },
+  text: {},
 })

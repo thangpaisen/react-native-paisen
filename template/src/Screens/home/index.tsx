@@ -1,4 +1,6 @@
-import { ButtonCM, CheckBoxCM, TextCM, HeaderCM } from '@Components'
+import Icons from '@Assets/Icons'
+import { ButtonCM, CheckBoxCM, TextCM, HeaderCM, IconSvgCM } from '@Components'
+import { Colors } from '@Constants'
 import { useAppDispatch, useAppSelector } from '@Hooks'
 import { getListMovie } from '@Services/Apis/movies'
 import { APP_PADDING } from '@Utils/Utils'
@@ -29,10 +31,12 @@ const HomeScreen = () => {
     <SafeAreaView style={styles.ctnContainer}>
       <HeaderCM label={'Home Screen'} isShowIconLeft={false} />
       <View style={styles.container}>
-        <TextCM fontSize={24}>Example Text bold</TextCM>
+        {/* Example Text */}
         <TextCM bold fontSize={24}>
           Example Text
         </TextCM>
+
+        {/* Example Button  */}
         <ButtonCM
           label='Toast'
           containerStyle={{
@@ -49,8 +53,21 @@ const HomeScreen = () => {
             })
           }}
         />
-        <CheckBoxCM title='Check me' checked={checked} onPress={() => setChecked(!checked)} />
+
+        {/* Checkbox */}
+        <CheckBoxCM
+          title='Checkbox'
+          checked={checked}
+          onPress={() => setChecked(!checked)}
+          iconRight
+        />
+
+        {/* Radio */}
+        <CheckBoxCM title='Radio' checked={checked} onPress={() => setChecked(!checked)} radio />
+
+        {/* Icon */}
         <Icon name='home' size={20} />
+        <IconSvgCM source={Icons.IcCalendar} color={Colors.black} />
       </View>
     </SafeAreaView>
   )
