@@ -2,46 +2,80 @@ import { ScreenName } from '@Constants'
 import { useAppSelector } from '@Hooks'
 import i18n from '@I18n'
 import { LoginScreen, SplashScreen } from '@Navigators/Stack'
-import { DefaultTheme, NavigationContainer } from '@react-navigation/native'
+import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import React, { useEffect } from 'react'
 import { StatusBar } from 'react-native'
 import MainBottomTab from './MainBottomTab'
 import { navigationRef } from './utils'
+import { isEmpty } from 'lodash'
+import { setAccessToken } from 'src/Services/httpClient'
 const Stack = createStackNavigator()
 
 const ApplicationNavigator = () => {
-  const language = useAppSelector((state) => state.user.language)
+  const { language, user, accessToken } = useAppSelector((state) => state.user)
+  const [ready, setReady] = React.useState(false)
 
   useEffect(() => {
-    getLanguage()
-  }, [])
-
-  const getLanguage = () => {
     i18n.changeLanguage(language)
+  }, [language])
+
+  useEffect(() => {
+    if (accessToken) {
+      setAccessToken(accessToken)
+    }
+    setReady(true)
+  }, [accessToken])
+
+  const renderNavigator = () => {
+    if (!ready) {
+      return <SplashNavigator />
+    } else if (!isEmpty(user)) {
+      return <MainNavigator />
+    } else {
+      return <AuthNavigator />
+    }
   }
 
   return (
-    <NavigationContainer ref={navigationRef} theme={MyTheme}>
+    <NavigationContainer ref={navigationRef}>
       <StatusBar barStyle={'dark-content'} />
-      <Stack.Navigator
-        screenOptions={{ headerShown: false }}
-        initialRouteName={ScreenName.SplashScreen}
-      >
-        <Stack.Screen name={ScreenName.SplashScreen} component={SplashScreen} />
-        <Stack.Screen name={ScreenName.LoginScreen} component={LoginScreen} />
-        <Stack.Screen name={ScreenName.MainBottomTab} component={MainBottomTab} />
-      </Stack.Navigator>
+      {renderNavigator()}
     </NavigationContainer>
   )
 }
 
-const MyTheme = {
-  ...DefaultTheme,
-  colors: {
-    ...DefaultTheme.colors,
-    background: 'white',
-  },
+const SplashNavigator = () => {
+  return (
+    <Stack.Navigator
+      screenOptions={{ headerShown: false }}
+      initialRouteName={ScreenName.SplashScreen}
+    >
+      <Stack.Screen name={ScreenName.SplashScreen} component={SplashScreen} />
+    </Stack.Navigator>
+  )
+}
+
+const AuthNavigator = () => {
+  return (
+    <Stack.Navigator
+      screenOptions={{ headerShown: false }}
+      initialRouteName={ScreenName.LoginScreen}
+    >
+      <Stack.Screen name={ScreenName.LoginScreen} component={LoginScreen} />
+    </Stack.Navigator>
+  )
+}
+
+const MainNavigator = () => {
+  return (
+    <Stack.Navigator
+      screenOptions={{ headerShown: false }}
+      initialRouteName={ScreenName.MainBottomTab}
+    >
+      <Stack.Screen name={ScreenName.MainBottomTab} component={MainBottomTab} />
+    </Stack.Navigator>
+  )
 }
 
 export default ApplicationNavigator

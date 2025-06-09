@@ -19,18 +19,12 @@
       "@Screens/*": ["src/Screens/*"],
       "@Hooks": ["src/Hooks"],
       "@I18n": ["src/I18n"],
-      "@Model": ["src/Model"],
+      "@Models/*": ["src/Models/*"],
       "@Utils/*": ["src/Utils/*"],
-      "@Services/*": ["src/Services/*"],
-      "@Store": ["src/Store"],
-      "@Type/*": ["src/Type/*"],
+      "@Services": ["src/Services"],
+      "@Redux/*": ["src/Redux/*"],
       "@Navigators/*": ["src/Navigators/*"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "babel.config.js",
-    "metro.config.js",
-    "jest.config.js"
-  ]
+  "exclude": ["node_modules", "babel.config.js", "metro.config.js", "jest.config.js"]
 }

@@ -1,8 +1,8 @@
 import Icons from '@Assets/Icons'
-import { ButtonCM, CheckBoxCM, TextCM, HeaderCM, IconSvgCM } from '@Components'
+import { ButtonCM, CheckBoxCM, HeaderCM, IconSvgCM, TextCM } from '@Components'
 import { Colors } from '@Constants'
 import { useAppDispatch, useAppSelector } from '@Hooks'
-import { getListMovie } from '@Services/Apis/movies'
+import { fetchUserInfo } from '@Redux/Thunks'
 import { APP_PADDING } from '@Utils/Utils'
 import React, { useEffect } from 'react'
 import { SafeAreaView, StyleSheet, View } from 'react-native'
@@ -11,8 +11,7 @@ import Icon from 'react-native-vector-icons/Ionicons'
 
 const HomeScreen = () => {
   const dispatch = useAppDispatch()
-  const movie = useAppSelector((state) => state.movie.data)
-  console.log('movie: ', movie)
+  const { user } = useAppSelector((state) => state.user)
 
   const [checked, setChecked] = React.useState(false)
 
@@ -21,10 +20,7 @@ const HomeScreen = () => {
   }, [])
 
   const getData = async () => {
-    dispatch(getListMovie()).then((res: any) => {
-      if (!res.payload) {
-      }
-    })
+    dispatch(fetchUserInfo())
   }
 
   return (
@@ -33,7 +29,7 @@ const HomeScreen = () => {
       <View style={styles.container}>
         {/* Example Text */}
         <TextCM bold fontSize={24}>
-          Example Text
+          Example Text: {user?.firstName || 'No User Data'}
         </TextCM>
 
         {/* Example Button  */}
@@ -43,6 +39,7 @@ const HomeScreen = () => {
             width: '100%',
           }}
           onPress={() => {
+            dispatch(fetchUserInfo())
             Toast.show({
               type: 'success',
               text1: 'Hello' + Date.now(),
@@ -78,6 +75,7 @@ export default HomeScreen
 const styles = StyleSheet.create({
   ctnContainer: {
     flex: 1,
+    backgroundColor: Colors.backgroundColor,
   },
   container: {
     flex: 1,

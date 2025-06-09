@@ -19,7 +19,7 @@ const TextCM = ({ fontSize, style, bold, color, children, numberOfLines, ...prop
           ...styles.txtText,
           fontSize,
           color,
-          fontFamily: bold ? Fonts.BeVietnamProSemiBold : Fonts.BeVietnamProMedium,
+          fontFamily: bold ? Fonts.BeVietnamProSemiBold : Fonts.BeVietnamProRegular,
         },
         style,
       ]}

@@ -1,24 +1,9 @@
 import Icons from '@Assets/Icons'
 import { IconSvgCM } from '@Components'
-import { Texts } from '@Constants'
-import { navigateAndSimpleReset } from '@Navigators/utils'
-import React, { useEffect } from 'react'
+import React from 'react'
 import { StyleSheet, View } from 'react-native'
 
 const SplashScreen = () => {
-  const init = async () => {
-    await new Promise((resolve) =>
-      setTimeout(() => {
-        resolve(true)
-      }, 2000)
-    )
-    navigateAndSimpleReset(Texts.MainBottomTab)
-  }
-
-  useEffect(() => {
-    init()
-  })
-
   return (
     <View style={styles.container}>
       <IconSvgCM source={Icons.Logo} size={140} />
