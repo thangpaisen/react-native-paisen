@@ -41,17 +41,17 @@
 ### Create a new project
 
 ```bash
-npx react-native init MyApp --template react-native-template-paisen
+npx @react-native-community/cli init MyApp --template react-native-template-paisen
 ```
 
 **Alternative methods:**
 
 ```bash
 # Using GitHub URL
-npx react-native init MyApp --template https://github.com/thangpaisen/react-native-paisen.git
+npx @react-native-community/cli init MyApp --template https://github.com/thangpaisen/react-native-paisen.git
 
 # Using local template
-npx react-native init MyApp --template file:///path/to/react-native-template-paisen
+npx @react-native-community/cli init MyApp --template file:///path/to/react-native-template-paisen
 ```
 
 ### Navigate to your project
