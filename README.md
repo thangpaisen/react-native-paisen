@@ -133,6 +133,7 @@ src/
 - **IconSvg** - SVG icon wrapper
 - **Loading** - Loading indicator component
 - **Text** - Typography component with theme support
+- **Input** - Customizable TextInput component
 
 ### 🔄 Redux Structure
 

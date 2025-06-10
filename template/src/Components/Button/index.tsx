@@ -1,4 +1,4 @@
-import { Colors } from '@Constants'
+import { Colors, Fonts } from '@Constants'
 import React from 'react'
 import { StyleSheet, TextStyle, TouchableOpacity, ViewStyle } from 'react-native'
 import { TextCM } from '@Components'
@@ -49,7 +49,7 @@ export default ButtonCM
 
 const styles = StyleSheet.create({
   container: {
-    height: 40,
+    height: 48,
     borderRadius: 8,
     justifyContent: 'center',
     alignItems: 'center',
@@ -57,5 +57,7 @@ const styles = StyleSheet.create({
   },
   txtLabel: {
     color: '#fff',
+    fontSize: 16,
+    fontFamily: Fonts.BeVietnamProMedium,
   },
 })

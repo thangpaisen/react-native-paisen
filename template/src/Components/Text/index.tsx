@@ -1,17 +1,15 @@
 import { Colors, Fonts } from '@Constants'
 import React, { ReactNode } from 'react'
-import { StyleSheet, Text, TextStyle } from 'react-native'
+import { StyleSheet, Text, TextProps } from 'react-native'
 
-type Props = {
+interface Props extends TextProps {
   fontSize?: number
-  style?: TextStyle | Array<TextStyle | undefined>
   bold?: boolean
   color?: string
   children?: ReactNode
-  numberOfLines?: number
 }
 
-const TextCM = ({ fontSize, style, bold, color, children, numberOfLines, ...props }: Props) => {
+const TextCM = ({ fontSize, style, bold, color, children, ...props }: Props) => {
   return (
     <Text
       style={[
@@ -23,7 +21,6 @@ const TextCM = ({ fontSize, style, bold, color, children, numberOfLines, ...prop
         },
         style,
       ]}
-      numberOfLines={numberOfLines}
       {...props}
     >
       {children}
