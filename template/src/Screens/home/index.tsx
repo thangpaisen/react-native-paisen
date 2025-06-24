@@ -1,16 +1,16 @@
 import Icons from '@Assets/Icons'
 import { ButtonCM, CheckBoxCM, HeaderCM, IconSvgCM, TextCM } from '@Components'
 import { Colors } from '@Constants'
-import { useAppDispatch, useAppSelector } from '@Hooks'
+import { useAppDispatch, useAppSelector, useToast } from '@Hooks'
 import { fetchUserInfo } from '@Redux/Thunks'
 import { APP_PADDING } from '@Utils/Utils'
 import React, { useEffect } from 'react'
 import { SafeAreaView, StyleSheet, View } from 'react-native'
-import Toast from 'react-native-toast-message'
 import Icon from 'react-native-vector-icons/Ionicons'
 
 const HomeScreen = () => {
   const dispatch = useAppDispatch()
+  const { showToast } = useToast()
   const { user } = useAppSelector((state) => state.user)
 
   const [checked, setChecked] = React.useState(false)
@@ -40,14 +40,7 @@ const HomeScreen = () => {
           }}
           onPress={() => {
             dispatch(fetchUserInfo())
-            Toast.show({
-              type: 'success',
-              text1: 'Hello' + Date.now(),
-              text2: 'This is some something 👋',
-              onPress: () => {
-                Toast.hide()
-              },
-            })
+            showToast('This is a toast message!')
           }}
         />
 

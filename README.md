@@ -132,10 +132,11 @@ src/
 - **Header** - Navigation header component
 - **IconSvg** - SVG icon wrapper
 - **Input** - Advanced TextInput component with animated label
-  - **InputField** - React Hook Form integration wrapper
+- **InputField** - React Hook Form integration wrapper
 - **Loading** - Loading indicator component
 - **Popup** - Modal popup component
 - **Text** - Typography component with theme support
+- **Toast** - Notification toast with Redux state management and gesture support
 
 ### 🔄 Redux Structure
 

@@ -2,7 +2,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 import { configureStore } from '@reduxjs/toolkit'
 import { combineReducers } from 'redux'
 import { persistReducer, persistStore } from 'redux-persist'
-import { movieReducer, userReducer } from './Slices'
+import { movieReducer, userReducer, toastReducer } from './Slices'
 
 const persistConfig = {
   key: 'root',
@@ -13,6 +13,7 @@ const persistConfig = {
 const rootReducer = {
   movie: movieReducer,
   user: userReducer,
+  toast: toastReducer,
   // Thêm các slice khác ở đây
 }
 

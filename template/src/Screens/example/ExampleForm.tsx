@@ -3,7 +3,7 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { View, StyleSheet, TouchableOpacity, Alert, Text } from 'react-native'
-import InputFieldCM from './index'
+import InputFieldCM from '../../Components/InputField/index'
 
 interface FormData {
   email: string
