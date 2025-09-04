@@ -1,4 +1,4 @@
-import { Colors, Texts } from '@Constants'
+import { Colors, ScreenName } from '@Constants'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import React from 'react'
 import Icon from 'react-native-vector-icons/Ionicons'
@@ -9,7 +9,7 @@ const Tab = createBottomTabNavigator()
 const MainBottomTab = () => {
   return (
     <Tab.Navigator
-      initialRouteName={Texts.HomeScreen}
+      initialRouteName={ScreenName.HomeScreen}
       screenOptions={({ route }) => ({
         headerShown: false,
         tabBarShowLabel: false,
@@ -22,9 +22,9 @@ const MainBottomTab = () => {
         tabBarIcon: ({ focused }) => {
           let iconName = ''
           let focusedColor = focused ? Colors.blue : Colors.colorA3A9AC
-          if (route.name === Texts.HomeScreen) {
+          if (route.name === ScreenName.HomeScreen) {
             iconName = 'home'
-          } else if (route.name === Texts.ProfileScreen) {
+          } else if (route.name === ScreenName.ProfileScreen) {
             iconName = 'person'
           }
 
@@ -39,8 +39,8 @@ const MainBottomTab = () => {
         },
       })}
     >
-      <Tab.Screen name={Texts.HomeScreen} component={HomeScreen} />
-      <Tab.Screen name={Texts.ProfileScreen} component={ProfileScreen} />
+      <Tab.Screen name={ScreenName.HomeScreen} component={HomeScreen} />
+      <Tab.Screen name={ScreenName.ProfileScreen} component={ProfileScreen} />
     </Tab.Navigator>
   )
 }
